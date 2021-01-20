@@ -1,4 +1,4 @@
-describe("Login App form test", () => {
+describe("Infoxchange App test", () => {
     it('visits the app', () => {
         cy.visit('/')
     });
