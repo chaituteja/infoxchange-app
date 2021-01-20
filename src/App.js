@@ -1,6 +1,9 @@
 import React, { Component } from 'react';
 import CardList from './components/CardList';
 import './App.css';
+import 'tachyons';
+import "bootstrap/dist/css/bootstrap.css";
+import 'bootstrap/dist/js/bootstrap.js';
 
 class App extends Component {
 
