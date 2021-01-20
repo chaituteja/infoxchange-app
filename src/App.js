@@ -4,6 +4,8 @@ import './App.css';
 import 'tachyons';
 import "bootstrap/dist/css/bootstrap.css";
 import 'bootstrap/dist/js/bootstrap.js';
+import CreateBook from './components/CreateBook';
+
 
 class App extends Component {
 
@@ -101,6 +103,28 @@ class App extends Component {
         this.getBooks();
       });
   }
+
+    // Create a new book  based on the informaion provided
+    createBook(event) {
+      document.getElementById("create-book-form").reset();
+      fetch("http://localhost:5000/books", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json"
+        },
+        body: JSON.stringify(this.state.bookData)
+        })
+        .then(result => {
+          this.setState({
+            bookData: {
+              title: "",
+              author: "",
+              isbn:""
+            }
+          });
+          this.getBooks();
+        });
+    }
 
   render() {
     return (
