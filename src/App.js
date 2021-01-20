@@ -51,6 +51,30 @@ class App extends Component {
       });
     }
 
+  // Function responsible for handling input fields
+  handleChange(event) {
+    var title = this.state.bookData.title;
+    var author = this.state.bookData.author;
+    var isbn = this.state.bookData.isbn;
+
+    if (event.target.name === "title") {
+      title = event.target.value;
+    } else if (event.target.name === "author") {
+      author = event.target.value;
+    } 
+    else {
+      isbn = event.target.value;
+    }
+
+    this.setState({
+      bookData: {
+        title: title,
+        author: author,
+        isbn: isbn
+      }
+    });
+  }
+
   render() {
     return (
       <div className="App tc pa4">
