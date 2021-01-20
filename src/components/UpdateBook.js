@@ -20,13 +20,13 @@ const UpdateBook = ({bookData, updateBook, handleChange, getBook, elementId}) =>
                 <div className="modal-body">
                   <form id="update-book-form">
                         <div className="form-group">
-                          <input type="text" class="form-control" placeholder="title" name="title" value={bookData.title} onChange={handleChange}></input>
+                          <input type="text" className="form-control" placeholder="title" name="title" value={bookData.title} onChange={handleChange}></input>
                         </div>
                         <div className="form-group">
-                          <input type="text" class="form-control" placeholder="author" name="author" value={bookData.author} onChange={handleChange}></input>
+                          <input type="text" className="form-control" placeholder="author" name="author" value={bookData.author} onChange={handleChange}></input>
                         </div>
                         <div className="form-group">
-                          <input type="text" class="form-control" placeholder="ISBN" name="isbn" value={bookData.isbn} onChange={handleChange}></input>
+                          <input type="text" className="form-control" placeholder="ISBN" name="isbn" value={bookData.isbn} onChange={handleChange}></input>
                         </div>
                   </form>
                 </div>

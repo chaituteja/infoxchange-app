@@ -18,13 +18,13 @@ const CreateBook = (props) => {
                         <div className="modal-body">
                             <form id="create-book-form">
                                 <div className="form-group">
-                                    <input type="text" class="form-control" placeholder="Title" name="title" defaultValue="" onChange={props.handleChange} />
+                                    <input type="text" className="form-control" placeholder="Title" name="title" defaultValue="" onChange={props.handleChange} />
                                 </div>
                                 <div className="form-group">
-                                    <input type="text" class="form-control" placeholder="Author Name" name="author" defaultValue="" onChange={props.handleChange} />
+                                    <input type="text" className="form-control" placeholder="Author Name" name="author" defaultValue="" onChange={props.handleChange} />
                                 </div>
                                 <div className="form-group">
-                                    <input type="text" class="form-control" placeholder="ISBN" name="isbn"  defaultValue="" onChange={props.handleChange} />
+                                    <input type="text" className="form-control" placeholder="ISBN" name="isbn"  defaultValue="" onChange={props.handleChange} />
                                 </div>
                             </form>
                         </div>
