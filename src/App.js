@@ -15,6 +15,8 @@ class App extends Component {
         isbn:""
       }
     };
+    this.getBooks = this.getBooks.bind(this);
+    this.getBook = this.getBook.bind(this);
   }
 
   // Get list of book when component is mounted
@@ -33,6 +35,21 @@ class App extends Component {
         console.log(error);
     });
   }
+
+  // Fetch call to get a particular book based on id
+  getBook(event, id) {
+    fetch("http://localhost:5000/books/" + id)
+      .then(res => res.json())
+      .then(result => {
+        this.setState({
+          bookData: {
+            title: result.title,
+            author: result.author ? result.author : "",
+            isbn: result.isbn
+          }
+        });
+      });
+    }
 
   render() {
     return (
