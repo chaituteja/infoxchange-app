@@ -19,14 +19,23 @@ const UpdateBook = ({bookData, updateBook, handleChange, getBook, elementId}) =>
                   </div>
                 <div className="modal-body">
                   <form id="update-book-form">
-                        <div className="form-group">
-                          <input type="text" className="form-control" placeholder="title" name="title" value={bookData.title} onChange={handleChange}></input>
+                        <div className="form-group row">
+                          <label className='form-label col-sm-2 col-form-label'>Title</label>
+                          <div className='col-sm-10'>
+                            <input type="text" className="form-control" placeholder="Book Title" name="title" value={bookData.title} onChange={handleChange}></input>
+                          </div>
                         </div>
-                        <div className="form-group">
-                          <input type="text" className="form-control" placeholder="author" name="author" value={bookData.author} onChange={handleChange}></input>
+                        <div className="form-group row">
+                          <label className='form-label col-sm-2 col-form-label'>Author</label>
+                          <div className='col-sm-10'>
+                            <input type="text" className="form-control" placeholder="Author name" name="author" value={bookData.author} onChange={handleChange}></input>
+                          </div>
                         </div>
-                        <div className="form-group">
-                          <input type="text" className="form-control" placeholder="ISBN" name="isbn" value={bookData.isbn} onChange={handleChange}></input>
+                        <div className="form-group row">
+                          <label className='form-label col-sm-2 col-form-label'>ISBN</label>
+                          <div className='col-sm-10'>
+                            <input type="text" className="form-control" placeholder="Book ISBN" name="isbn" value={bookData.isbn} onChange={handleChange}></input>
+                          </div>
                         </div>
                   </form>
                 </div>

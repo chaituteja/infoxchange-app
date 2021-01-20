@@ -17,14 +17,23 @@ const CreateBook = (props) => {
                         </div>
                         <div className="modal-body">
                             <form id="create-book-form">
-                                <div className="form-group">
-                                    <input type="text" className="form-control" placeholder="Title" name="title" defaultValue="" onChange={props.handleChange} />
+                                <div className="form-group row">
+                                <label className='form-label col-sm-2 col-form-label'>Title</label>
+                                <div className='col-sm-10'>
+                                    <input type="text" className="form-control" placeholder="Book Title" name="title" defaultValue="" onChange={props.handleChange} />
+                                    </div>
                                 </div>
-                                <div className="form-group">
+                                <div className="form-group row">
+                                    <label className='form-label col-sm-2 col-form-label'>Author</label>
+                                    <div className='col-sm-10'>
                                     <input type="text" className="form-control" placeholder="Author Name" name="author" defaultValue="" onChange={props.handleChange} />
+                                    </div>
                                 </div>
-                                <div className="form-group">
-                                    <input type="text" className="form-control" placeholder="ISBN" name="isbn"  defaultValue="" onChange={props.handleChange} />
+                                <div className="form-group row">
+                                    <label className='form-label col-sm-2 col-form-label'>ISBN</label>
+                                    <div className='col-sm-10'>
+                                    <input type="text" className="form-control" placeholder="Book ISBN" name="isbn"  defaultValue="" onChange={props.handleChange} />
+                                    </div>
                                 </div>
                             </form>
                         </div>
