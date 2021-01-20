@@ -17,6 +17,8 @@ class App extends Component {
     };
     this.getBooks = this.getBooks.bind(this);
     this.getBook = this.getBook.bind(this);
+    this.updateBook = this.updateBook.bind(this);
+    this.handleChange = this.handleChange.bind(this);
   }
 
   // Get list of book when component is mounted
@@ -73,6 +75,28 @@ class App extends Component {
         isbn: isbn
       }
     });
+  }
+
+   // Updates information about the book based on id
+   updateBook(event, id) {
+    fetch("http://localhost:5000/books/" + id, {
+      method: "PUT",
+      headers: {
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify(this.state.bookData)
+    })
+      .then(res => res.json())
+      .then(result => {
+        this.setState({
+          bookData: {
+            title: "",
+            author: "",
+            isbn:""
+          }
+        });
+        this.getBooks();
+      });
   }
 
   render() {
