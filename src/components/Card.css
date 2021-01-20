@@ -1,0 +1,18 @@
+.book-name:hover {
+    text-decoration: underline;
+    color: #1da4e2;
+  }
+
+  .book-info {
+    animation: opacityAnimation 2s, heightAnimation 1s;
+  }
+  
+  @keyframes opacityAnimation {
+      from { opacity: 0; }
+      to   { opacity: 1; }
+  }
+
+  @keyframes heightAnimation {
+    from { height: 0; }
+    to   { height: 80px; }
+}
