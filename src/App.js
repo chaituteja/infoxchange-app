@@ -6,7 +6,6 @@ import "bootstrap/dist/css/bootstrap.css";
 import 'bootstrap/dist/js/bootstrap.js';
 import CreateBook from './components/CreateBook';
 
-
 class App extends Component {
 
   constructor(props) {
@@ -23,6 +22,7 @@ class App extends Component {
     this.getBooks = this.getBooks.bind(this);
     this.getBook = this.getBook.bind(this);
     this.updateBook = this.updateBook.bind(this);
+    this.createBook = this.createBook.bind(this);
     this.handleChange = this.handleChange.bind(this);
   }
 
@@ -132,9 +132,16 @@ class App extends Component {
         <h1>Book List</h1>
         <div className='container'>
           <div className='row'>
+            <CreateBook 
+              bookData={this.state.bookData}
+              createBook={this.createBook}
+              handleChange={this.handleChange} />
+
             <CardList books={this.state.books}
               bookData={this.state.bookData}
-              />
+              updateBook={this.updateBook}
+              getBook={this.getBook}
+              handleChange={this.handleChange} />
 
           </div>
         </div>
