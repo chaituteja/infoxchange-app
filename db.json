@@ -1,0 +1,34 @@
+{
+    "books": [
+      {
+        "title": "A Game Of Thrones",
+        "author": "GEORGE R.R. MARTIN",
+        "isbn": "1234",
+        "id": 1
+      },
+      {
+        "title": "THE WAY OF KINGS",
+        "author": "BRANDON SANDERSON",
+        "isbn": "1568",
+        "id": 2
+      },
+      {
+        "title": "ASSASSIN’S APPRENTICE",
+        "author": "ROBIN HOBB",
+        "isbn": "3543",
+        "id": 3
+      },
+      {
+        "title": "The Name of the Wind",
+        "author": "Patrick teja",
+        "isbn": "4343",
+        "id": 4
+      },
+      {
+        "title": "A Wizard of Earthsea",
+        "author": "Ursula K. Le Guin ",
+        "isbn": "1256",
+        "id": 5
+      }
+    ]
+  }
